@@ -1,0 +1,11 @@
+{
+  "name": "sernode2005",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/phamtanphat/Servernode2005.git",
+  "author": "phatdroid@gmail.com <phatdroid94@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
