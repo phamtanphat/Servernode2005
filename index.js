@@ -13,5 +13,6 @@ app.get("/chia/:a/:b" , (req , res) => {
     res.send({success : true , ketqua})
 })
 
+//mongodb+srv://abc_123:ABC123!@#@databasenode-fx0di.mongodb.net/test?retryWrites=true&w=majority
 
 app.listen("3000",() => console.log("Server started"))
