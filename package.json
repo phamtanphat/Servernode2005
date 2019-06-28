@@ -6,8 +6,10 @@
   "author": "phatdroid@gmail.com <phatdroid94@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
-  },"scripts": {
-    "start" : "nodemon word.model.js"
+    "express": "^4.17.1",
+    "mongoose": "^5.6.1"
+  },
+  "scripts": {
+    "start": "nodemon word.model.js"
   }
 }
