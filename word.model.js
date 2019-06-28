@@ -18,6 +18,11 @@ const Word = mongoose.model('Word', {
 // .catch(error => console.log(error.message))
 
 //UPDATE
-Word.findByIdAndUpdate("5d15fca8c06d1b04571adb78",{isMemorized : false} , {new : true})
+// Word.findByIdAndUpdate("5d15fca8c06d1b04571adb78",{isMemorized : false} , {new : true})
+// .then(w => console.log(w))
+// .catch(error => console.log(error.message))
+
+//DELETE 
+Word.findByIdAndDelete("5d15fca8c06d1b04571adb78")
 .then(w => console.log(w))
 .catch(error => console.log(error.message))
