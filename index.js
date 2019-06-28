@@ -24,5 +24,26 @@ app.post("/word" , (req , res) => {
     .then(w => res.send({success : true , word : w}))
     .catch(error => res.send({success : false , message : error}))
 })
+//update
+app.put("/word/:_id" , (req , res) => {
+    const {_id} = req.params
+    const {isMemorized} = req.body
+    if(_id.trim() === '' || isMemorized === null){
+        return res.send({success : false , message : "Emty value"})
+    }
+    Word.findByIdAndUpdate(_id,{isMemorized},{new : true})
+    .then(w => res.send({success : true , word : w}))
+    .catch(error => res.send({success : false , message : error}))
+})
+//delete
+app.delete("/word/:_id" , (req , res) => {
+    const {_id} = req.params
+    if(_id.trim() === ''){
+        return res.send({success : false , message : "Emty value"})
+    }
+    Word.findByIdAndDelete(_id)
+    .then(w => res.send({success : true , word : w}))
+    .catch(error => res.send({success : false , message : error}))
+})
 
 app.listen("3000",() => console.log("Server started"))
