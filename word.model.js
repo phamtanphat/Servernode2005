@@ -6,6 +6,7 @@ const Word = mongoose.model('Word', {
     vn : {type : String , require : true , trim : true },
     isMemorized : {type : Boolean , require : true , default : false},
 });
+module.exports = {Word}
 
 //SELECT 
 // Word.find({})
@@ -23,6 +24,6 @@ const Word = mongoose.model('Word', {
 // .catch(error => console.log(error.message))
 
 //DELETE 
-Word.findByIdAndDelete("5d15fca8c06d1b04571adb78")
-.then(w => console.log(w))
-.catch(error => console.log(error.message))
+// Word.findByIdAndDelete("5d15fca8c06d1b04571adb78")
+// .then(w => console.log(w))
+// .catch(error => console.log(error.message))
